@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class Unit6StudyNote {
     
     public static void mssg(String msg){
-        JOptionPane.showMessageDialog(null,"");
+        JOptionPane.showMessageDialog(null,msg);
     }
     
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Unit6StudyNote {
         
         
         
-        while(quit != false){
+        while(quit == false){
             mssg("Welcome to the Unit 6 Study System");
             int option = Integer.parseInt(JOptionPane.showInputDialog("Enter a option: + \n1.Study Notes \n2.Quiz \n3.Quit"));
             
@@ -40,6 +40,7 @@ public class Unit6StudyNote {
                 
             }
             else if(option == 3){
+                mssg("You have chosen to close the program, goodbye!");
                 quit = true;
             }
             else{
