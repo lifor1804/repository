@@ -21,7 +21,11 @@ public class Unit6StudyNote {
     }
     
     public static void notes(String[] notes){
-        
+        boolean quit = false;
+        while (quit == false) {
+            int r = (int) (Math.random()* notes.length);
+            mssg(notes[r]);
+        }
     }
     
     public static void main(String[] args) {
@@ -32,9 +36,8 @@ public class Unit6StudyNote {
         boolean quit = false;
         
         
-        
+        mssg("Welcome to the Unit 6 Study System");
         while(quit == false){
-            mssg("Welcome to the Unit 6 Study System");
             int option = Integer.parseInt(JOptionPane.showInputDialog("Enter a option: \n1.Study Notes \n2.Quiz \n3.Quit"));
             
             if(option == 1){
