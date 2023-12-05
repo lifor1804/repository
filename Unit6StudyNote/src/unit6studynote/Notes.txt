@@ -13,3 +13,5 @@ The phases of the waterfall model are: Problem statement, Analysis, Design, Impl
 The Waterfall model was created by Dr Winston Royce in 1970 from his experience in developing software for spacecraft mission planning
 Mistakes found in the SDLC are much less expensive to correct than those found later
 The cost of developing developing software is not spread equally over the phases
+The project management tools: Gantt Chart, UML, Daily Log, Weekly Reports, Communication
+The gantt chart was developed in 1910 by a mechanical engineer Henry Gantt
