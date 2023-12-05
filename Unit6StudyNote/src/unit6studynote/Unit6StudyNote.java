@@ -20,6 +20,10 @@ public class Unit6StudyNote {
         JOptionPane.showMessageDialog(null,msg);
     }
     
+    public static void notes(String[] notes){
+        
+    }
+    
     public static void main(String[] args) {
         Question[] questions = new Question[getLength("src/unit6studynote/Quiz.txt")];
         String[] notes = new String[getLength("src/unit6studynote/Notes.txt")];
@@ -31,10 +35,10 @@ public class Unit6StudyNote {
         
         while(quit == false){
             mssg("Welcome to the Unit 6 Study System");
-            int option = Integer.parseInt(JOptionPane.showInputDialog("Enter a option: + \n1.Study Notes \n2.Quiz \n3.Quit"));
+            int option = Integer.parseInt(JOptionPane.showInputDialog("Enter a option: \n1.Study Notes \n2.Quiz \n3.Quit"));
             
             if(option == 1){
-                
+                notes(notes);
             }
             else if(option == 2){
                 
