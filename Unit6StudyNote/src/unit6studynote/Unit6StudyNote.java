@@ -21,22 +21,13 @@ public class Unit6StudyNote {
     }
     
     public static void main(String[] args) {
-        ArrayList <String> studyList = new ArrayList();
+        Question[] questions = new Question[getLength("src/unit6studynote/Quiz.txt")];
+        String[] notes = new String[getLength("src/unit6studynote/Notes.txt")];
+        loadArray("src/unit6studynote/Notes.txt/");
         
         boolean quit = false;
         
-        try{
-            File f = new File("src/unit6studynote/notes.txt");
-            Scanner s = new Scanner(f);
-            
-            while(s.hasNextLine()){
-                studyList.add(s.nextLine());
-            }
-            
-            
-        }catch(FileNotFoundException e){
-            System.out.println("Error " + e);
-        }
+        
         
         while(quit != false){
             mssg("Welcome to the Unit 6 Study System");
@@ -55,6 +46,34 @@ public class Unit6StudyNote {
                 mssg("That was not an option. Please try again.");
             }
         }
+    }
+    public static int getLength(String file) {
+        int i = 0;
+        try {
+            File f = new File(file);
+            Scanner s = new Scanner(f);
+            while(s.hasNextLine()) {
+                i++;
+                s.nextLine();
+            }
+        }catch(FileNotFoundException e) {
+            System.out.println("Error" + e);
+        }
+        return i;
+    }
+    public static String[] loadArray(String fileName) {
+        String[] array = new String[getLength(fileName)];
+        try {
+            File file = new File(fileName);
+            Scanner scanner = new Scanner(file);
+            for (int i = 0; i < array.length; i++) {
+                array[i] = scanner.nextLine();
+
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: " + e);
+        }
+        return array;
     }
     
 }
