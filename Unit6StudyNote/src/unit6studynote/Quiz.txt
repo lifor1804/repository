@@ -10,10 +10,10 @@ Which of the following is a question for measuring success?
 Is it scalable to meet the needs of the client?
 Which of the following is a question for measuring success?
 Is there a successful support system in place for the client?
-Which of the following is a question for measuring success?
-Was it delivered on time and ready to go?
-Which of the following is a question for measuring success?
-Was the client happy with the finished product?
+What is a JAR file?
+it's a compressed file with a .java extension
+True or False: The gantt chart was developed in 1910
+True
 True or false: A mistake made in one phase often requires the developer to backup and redo some of the work in the previous phase
 True
 Which of the following is a phase of the waterfall method?
