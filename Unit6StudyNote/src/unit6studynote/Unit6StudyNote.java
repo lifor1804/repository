@@ -4,6 +4,10 @@
  */
 package unit6studynote;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
@@ -11,17 +15,46 @@ import javax.swing.JOptionPane;
  * @author mirid1871
  */
 public class Unit6StudyNote {
-
-    public static void inputMessage(String msg){
-        JOptionPane.showInputDialog(msg);
-    }
     
-    public static void message(String msg){
+    public static void mssg(String msg){
         JOptionPane.showMessageDialog(null,"");
     }
     
     public static void main(String[] args) {
-        System.out.println("kyle a meany 2.0");
+        ArrayList <String> studyList = new ArrayList();
+        
+        boolean quit = false;
+        
+        try{
+            File f = new File("src/unit6studynote/notes.txt");
+            Scanner s = new Scanner(f);
+            
+            while(s.hasNextLine()){
+                studyList.add(s.nextLine());
+            }
+            
+            
+        }catch(FileNotFoundException e){
+            System.out.println("Error " + e);
+        }
+        
+        while(quit != false){
+            mssg("Welcome to the Unit 6 Study System");
+            int option = Integer.parseInt(JOptionPane.showInputDialog("Enter a option: + \n1.Study Notes \n2.Quiz \n3.Quit"));
+            
+            if(option == 1){
+                
+            }
+            else if(option == 2){
+                
+            }
+            else if(option == 3){
+                quit = true;
+            }
+            else{
+                mssg("That was not an option. Please try again.");
+            }
+        }
     }
     
 }
