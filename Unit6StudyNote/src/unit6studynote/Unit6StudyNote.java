@@ -4,15 +4,22 @@
  */
 package unit6studynote;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mirid1871
  */
 public class Unit6StudyNote {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static void inputMessage(String msg){
+        JOptionPane.showInputDialog(msg);
+    }
+    
+    public static void message(String msg){
+        JOptionPane.showMessageDialog(null,"");
+    }
+    
     public static void main(String[] args) {
         System.out.println("kyle a meany 2.0");
     }
