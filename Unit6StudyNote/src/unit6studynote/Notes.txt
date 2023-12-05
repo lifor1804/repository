@@ -7,3 +7,9 @@ Question for measuring success: Is it scalable to meet the needs of the client?
 Question for measuring success: Is there a successful support system in place for the client?
 Question for measuring success: Was it delivered on time and ready to go?
 Question for measuring success: Was the client happy with the finished product?
+A mistake made in one phase often requires the developer to backup and redo some of the work in the previous phase is called the waterfall model
+the ‘software development life cycle’ (SDLC) is a view of the software development process created by computer scientists
+The phases of the waterfall model are: Problem statement, Analysis, Design, Implementation, Integration/Test, Maintenance
+The Waterfall model was created by Dr Winston Royce in 1970 from his experience in developing software for spacecraft mission planning
+Mistakes found in the SDLC are much less expensive to correct than those found later
+The cost of developing developing software is not spread equally over the phases
