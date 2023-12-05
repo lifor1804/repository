@@ -15,3 +15,7 @@ Mistakes found in the SDLC are much less expensive to correct than those found l
 The cost of developing developing software is not spread equally over the phases
 The project management tools: Gantt Chart, UML, Daily Log, Weekly Reports, Communication
 The gantt chart was developed in 1910 by a mechanical engineer Henry Gantt
+The gantt chart helps project managers to visualize, schedule, and track scheduled as well as actual progress of projects
+UML stands for Unified Modeling Language
+UML specifies parts of a system
+UML is used for complex software designs are much more easily described through UML than textually
