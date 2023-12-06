@@ -42,13 +42,43 @@ public class Unit6StudyNote {
         int count = 0;
         while (quit == false && count < notes.length) {
          
-            input = JOptionPane.showConfirmDialog(null, "" + notes [count] + "\nDo you want to continue?",null, JOptionPane.YES_NO_OPTION);
+            input = JOptionPane.showConfirmDialog(null, "" + notes [count] + "\nDo you want to continue?","Notes", JOptionPane.YES_NO_OPTION);
             count++;
             
             if (input == 0) {
                 quit = false;
             } else {
                 quit = true;
+            }
+            
+        }
+    }
+    
+    public static void displayQuiz (Question [] answers) {
+        String output;
+        boolean quit = false;
+        for (int i = 0; i < answers.length - 1; i++) {
+            output = "";
+            output += answers [i].getQuestion();
+            int r = (int) (Math.random() * 2);
+            int e = (int) (Math.random() * answers.length - 1 );
+            while (e == i) {
+                e = (int) (Math.random() * answers.length - 1 );
+            }
+            if (r == 1) {
+                output += "\n1." + answers [i].getAnswer();
+                output += "\n2." + answers [e].getAnswer();
+                
+            } else {
+                output += "\n1." + answers [e].getAnswer();
+                output += "\n2." + answers [i].getAnswer();
+            }
+            
+            String answer = JOptionPane.showInputDialog(output);
+            if (answer.equalsIgnoreCase(answers [i].getAnswer())) {
+                mssg("Correct!");
+            } else {
+                mssg("Incorrect!\nThe correct answer was: " + answers [i].getAnswer());
             }
             
         }
@@ -71,7 +101,7 @@ public class Unit6StudyNote {
                 displayNotes(notes);
             }
             else if(option == 2){
-                
+                displayQuiz(questionsAnswers);
             }
             else if(option == 3){
                 mssg("You have chosen to close the program, goodbye!");
