@@ -22,10 +22,18 @@ import javax.swing.JOptionPane;
  */
 public class Unit6StudyNote {
     
+    /**
+     * When called, output a message using JOptionPane
+     * @param msg - Message to be outputted
+     */
     public static void mssg(String msg){
         JOptionPane.showMessageDialog(null,msg);
     }
     
+    /**
+     * When called, show user notes until user wants to close
+     * @param notes - Array of notes
+     */
     public static void notes(String[] notes){
         boolean quit = false;
         while (quit == false) {
@@ -61,6 +69,12 @@ public class Unit6StudyNote {
             }
         }
     }
+    
+    /**
+     * When called, return the size of a data file
+     * @param file - File path for text file
+     * @return - Size of the data file
+     */
     public static int getLength(String file) {
         int i = 0;
         try {
@@ -75,6 +89,12 @@ public class Unit6StudyNote {
         }
         return i;
     }
+    
+    /**
+     * When called, load an array with strings from a data file
+     * @param fileName - File path of text file
+     * @return - Filled array with strings
+     */
     public static String[] loadArray(String fileName) {
         String[] array = new String[getLength(fileName)];
         try {
