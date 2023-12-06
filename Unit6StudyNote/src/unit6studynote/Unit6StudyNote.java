@@ -44,7 +44,7 @@ public class Unit6StudyNote {
             int r = rInt.nextInt(notes.length - 1) + 1;
             
            
-            input = JOptionPane.showConfirmDialog(null, "" + notes [r] + "\nDo you want to continue?",null, JOptionPane.YES_NO_OPTION);
+            input = JOptionPane.showConfirmDialog(null, "" + notes [r] + "\nDo you want to continue?","Notes", JOptionPane.YES_NO_OPTION);
             if (input == 0) {
                 quit = false;
             } else {
