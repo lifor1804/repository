@@ -39,12 +39,12 @@ public class Unit6StudyNote {
     public static void displayNotes(String[] notes){
         boolean quit = false;
         int input;
-        while (quit == false) {
-            Random rInt = new Random();
-            int r = rInt.nextInt(notes.length - 1) + 1;
+        int count = 0;
+        while (quit == false && count < notes.length) {
+         
+            input = JOptionPane.showConfirmDialog(null, "" + notes [count] + "\nDo you want to continue?",null, JOptionPane.YES_NO_OPTION);
+            count++;
             
-           
-            input = JOptionPane.showConfirmDialog(null, "" + notes [r] + "\nDo you want to continue?",null, JOptionPane.YES_NO_OPTION);
             if (input == 0) {
                 quit = false;
             } else {
