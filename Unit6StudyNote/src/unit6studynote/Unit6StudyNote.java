@@ -34,12 +34,18 @@ public class Unit6StudyNote {
      * When called, show user notes until user wants to close
      * @param notes - Array of notes
      */
-    public static void notes(String[] notes){
+    public static void displayNotes(String[] notes){
         boolean quit = false;
+        int input;
         while (quit == false) {
             int r = (int) (Math.random()* notes.length);
-            mssg(notes[r]);
-            System.out.println("HI LIAM");
+            input = JOptionPane.showConfirmDialog(null, notes [r] + "\nDo you want to continue?");
+            if (input == 0) {
+                quit = false;
+            } else {
+                quit = true;
+            }
+            
         }
     }
     
@@ -56,7 +62,7 @@ public class Unit6StudyNote {
             int option = Integer.parseInt(JOptionPane.showInputDialog("Enter a option: \n1.Study Notes \n2.Quiz \n3.Quit"));
             
             if(option == 1){
-                notes(notes);
+                displayNotes(notes);
             }
             else if(option == 2){
                 
