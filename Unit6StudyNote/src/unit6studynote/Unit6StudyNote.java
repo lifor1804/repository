@@ -42,9 +42,9 @@ public class Unit6StudyNote {
         while (quit == false) {
             Random rInt = new Random();
             int r = rInt.nextInt(notes.length - 1) + 1;
-            System.out.println("");
+            
            
-            input = JOptionPane.showConfirmDialog(null, "" + notes [r] + "\nDo you want to continue?");
+            input = JOptionPane.showConfirmDialog(null, "" + notes [r] + "\nDo you want to continue?",null, JOptionPane.YES_NO_OPTION);
             if (input == 0) {
                 quit = false;
             } else {
@@ -55,7 +55,9 @@ public class Unit6StudyNote {
     }
     
     public static void main(String[] args) {
-        String[] questions = loadArray("src/unit6studynote/Quiz.txt/");
+        String[] questions = loadArray("src/unit6studynote/Questions.txt/");
+        String[] answers = loadArray("src/unit6studynote/Answers.txt/");
+        Question[] questionsAnswers = loadQuestion(questions, answers);
         String[] notes = loadArray("src/unit6studynote/Notes.txt/");
         
         boolean quit = false;
@@ -120,6 +122,12 @@ public class Unit6StudyNote {
         }
         return array;
     }
-    
+    public static Question[] loadQuestion(String[] answers, String[] questions) {
+        Question[] questionsAnswers = new Question[answers.length];
+        for (int i = 0; i < questions.length; i++) {
+            questionsAnswers[i] = new Question(questions[i], answers[i]);
+        }
+        return questionsAnswers;
+    }
     
 }
