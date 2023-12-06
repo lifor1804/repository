@@ -39,6 +39,7 @@ public class Unit6StudyNote {
         while (quit == false) {
             int r = (int) (Math.random()* notes.length);
             mssg(notes[r]);
+            System.out.println("HI LIAM");
         }
     }
     
