@@ -81,6 +81,7 @@ public class Unit6StudyNote {
             File f = new File(file);
             Scanner s = new Scanner(f);
             while(s.hasNextLine()) {
+                System.out.println("hello");
                 i++;
                 s.nextLine();
             }
