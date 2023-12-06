@@ -12,15 +12,17 @@ package unit6studynote;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author mirid1871
  */
 public class Unit6StudyNote {
+   
     
     /**
      * When called, output a message using JOptionPane
@@ -38,8 +40,11 @@ public class Unit6StudyNote {
         boolean quit = false;
         int input;
         while (quit == false) {
-            int r = (int) (Math.random()* notes.length);
-            input = JOptionPane.showConfirmDialog(null, notes [r] + "\nDo you want to continue?");
+            Random rInt = new Random();
+            int r = rInt.nextInt(notes.length - 1) + 1;
+            System.out.println("");
+           
+            input = JOptionPane.showConfirmDialog(null, "" + notes [r] + "\nDo you want to continue?");
             if (input == 0) {
                 quit = false;
             } else {
@@ -50,9 +55,8 @@ public class Unit6StudyNote {
     }
     
     public static void main(String[] args) {
-        Question[] questions = new Question[getLength("src/unit6studynote/Quiz.txt")];
-        String[] notes = new String[getLength("src/unit6studynote/Notes.txt")];
-        loadArray("src/unit6studynote/Notes.txt/");
+        Question[] questions = loadArray("src/unit6studynotes/N");
+        String[] notes = loadArray("src/unit6studynote/Notes.txt/");
         
         boolean quit = false;
         
@@ -116,5 +120,6 @@ public class Unit6StudyNote {
         }
         return array;
     }
+    
     
 }
