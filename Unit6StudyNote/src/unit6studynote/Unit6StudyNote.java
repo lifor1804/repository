@@ -55,7 +55,7 @@ public class Unit6StudyNote {
     }
     
     public static void main(String[] args) {
-        Question[] questions = loadArray("src/unit6studynotes/N");
+        String[] questions = loadArray("src/unit6studynote/Quiz.txt/");
         String[] notes = loadArray("src/unit6studynote/Notes.txt/");
         
         boolean quit = false;
