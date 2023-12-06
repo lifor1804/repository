@@ -1,6 +1,12 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+Kyle Pasta, Micah Riddler, Liam Fortin
+Friday December 1st - Wednesday December 6th 2023
+Stage 3: Implementation
+Code your system in stages
+Code a class and test it
+Code a method and test it
+Write user manuals and internal documentation
+Build an executable JAR so that anyone can use your program
  */
 package unit6studynote;
 
