@@ -19,4 +19,3 @@ The gantt chart helps project managers to visualize, schedule, and track schedul
 UML stands for Unified Modeling Language
 UML specifies parts of a system
 UML is used for complex software designs are much more easily described through UML than textually
-JAR stands for Java Archive
