@@ -205,7 +205,7 @@ public class Unit6StudyNote {
         //While user has not chosen to close the program, keep looping
         while(quit == false){
             //Prompt user to select one of three options
-            int option = Integer.parseInt(JOptionPane.showInputDialog("Enter a option: \n1.Study Notes \n2.Quiz \n3.Quit"));
+            int option = parseInt(JOptionPane.showInputDialog("Enter a option: \n1.Study Notes \n2.Quiz \n3.Quit"));
             
             //If user selects to see the notes, call the displayNotes method
             if(option == 1){
